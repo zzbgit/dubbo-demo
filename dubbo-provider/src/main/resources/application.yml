@@ -1,0 +1,15 @@
+spring:
+  dubbo:
+    application:
+      name: ServiceProvider
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    protocol:
+      name: dubbo
+      port: 20880
+    service:
+      interface: com.example.dubboapi.service.HelloService
+      ref: helloService
+  bean:
+    id: helloService
+    class: com.example.dubboprovider.service.impl.HelloServiceImpl

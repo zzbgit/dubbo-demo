@@ -1,0 +1,12 @@
+spring:
+  dubbo:
+    application:
+      name: ServiceConsumer
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    reference:
+      id: helloService
+      interface: com.example.dubboapi.service.HelloService
+
+server:
+  port: 8081
